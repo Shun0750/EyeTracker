@@ -1,0 +1,110 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+<style type="text/css">
+  body{
+    font-size: 15px;
+  }
+  .main{
+    width: 95%;
+    margin: auto;
+  }
+  td,th{
+    text-align: left;
+    font-size: 14px;
+  }
+  .desc{
+    font-size: 14px;
+    color: gray;
+  }
+  .section{
+    margin-bottom: 50px;
+  }
+</style>
+<h1>Sample Text</h1>
+<p class="desc">
+  This is the sample contents for eyetracker.js. See the detail at <a href="https://github.com/Shun0750/EyeTracker">the repo</a>. It only works with smartphone.
+</p>
+<h2>Highlight Color</h2>
+<p class="desc">
+  Adding "?mode=debug" after url, you can make the site debug mode. It will highlight contents with two patterns below.
+</p>
+<table border="1" style="width: 100%;">
+  <tr>
+    <td>View position</td>
+    <td style="background-color: beige;width:50%;"></td>
+  </tr>
+  <tr>
+    <td>Read content</td>
+    <td style="background-color: bisque;width:50%;"></td>
+  </tr>
+</table>
+
+<hr>
+<div class = "main">
+  <h2>Main Contents</h2>
+  <div class="section">
+    <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut urna rhoncus, convallis est nec, fringilla mi. 
+    </p>
+    <p>
+    Donec elit arcu, viverra sit amet malesuada nec, tincidunt tincidunt ipsum. 
+    </p>
+    <p>
+    Proin lacinia diam eu volutpat ultricies. Donec massa dui, egestas ac ante sit amet, egestas ullamcorper sapien. 
+    </p>
+    <p>
+    Etiam venenatis lectus vel fermentum cursus. Sed elementum nibh sed lacus mattis elementum.</p>
+    <p>Aliquam finibus varius est, non tristique arcu suscipit eget. Nunc sed convallis mauris. </p>
+    <p>Etiam semper, sem eget finibus scelerisque, felis leo placerat quam, id lobortis erat enim ut neque.</p>
+  </div>
+
+  <div class="section">
+    <p>
+      Cras sed risus nisl. Curabitur lacinia libero orci, sit amet volutpat risus cursus ac. 
+    </p>
+    <p>
+      Quisque vulputate elit tincidunt elit vehicula, sit amet auctor lacus sodales. 
+    </p>
+    <p>
+      Duis condimentum cursus justo eu porta. Etiam eleifend sollicitudin porta. Maecenas at volutpat tortor. 
+    </p>
+    <p>
+      Fusce viverra rhoncus arcu in maximus. Integer varius mattis magna vitae malesuada. Donec arcu diam, luctus eu ullamcorper sit amet, eleifend non odio. Nulla facilisi. 
+      </p>
+      <p>
+      Aliquam auctor purus vel neque volutpat, eu dictum quam porttitor.
+      </p>
+  </div>
+  
+
+<h2>Rresult</h2>
+  <table border="1">
+    <tr>
+      <th>Interested Contents</th>
+      <td id="output"></td>
+    </tr>
+    <tr>
+      <th>Reading Speed</th>
+      <td id="speed-output"></td>
+      </tr>
+    <tr>
+      <th>Interest for the article</th>
+      <td id="interest-output"></td>
+      </tr>
+    <tr>
+      <th>Hand</th>
+      <td id="hand-output"></td>
+    </tr>
+  </table>
+
+<script type="text/javascript" src="eyetracker.js"></script>
+<script type="text/javascript">
+  EyeTracker.Selector = ".main p";    // Set the target selector
+</script>
+
+
+</body>
+</html>

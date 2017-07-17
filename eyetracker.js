@@ -15,7 +15,7 @@ var EyeTracker = function(){};
   EyeTracker.RankArray = [];
   EyeTracker.CurrentViewedElement;
   EyeTracker.CurrentViewedElementNum = 0;
-  EyeTracker.CurrentConcentratedElementNum = 0;
+  EyeTracker.CurrentConcentratedElementNum;
   EyeTracker.CurrentViewedElementChanged = false;
   EyeTracker.MostViewedElements;
   EyeTracker.ViewAreaRate = [30,60];
@@ -337,20 +337,20 @@ var EyeTracker = function(){};
         document.getElementById("output").innerHTML = html_str;
       }
       if(EyeTracker.TouchedSide == "Left"){
-        document.getElementById("hand-output").innerHTML = "左手";
+        document.getElementById("hand-output").innerHTML = "Left Hand";
       }else{
-        document.getElementById("hand-output").innerHTML = "右手";
+        document.getElementById("hand-output").innerHTML = "Right Hand";
       }
-      document.getElementById("speed-output").innerHTML = "秒間 "+ parseInt(EyeTracker.ViewSpeedAverage) + "文字";
+      document.getElementById("speed-output").innerHTML = parseInt(EyeTracker.ViewSpeedAverage) + "characters / s";
       
       if(EyeTracker.Interest == 0){
-        document.getElementById("interest-output").innerHTML = "全くなし"
+        document.getElementById("interest-output").innerHTML = "Nothing"
       }else if(EyeTracker.Interest == 1){
-        document.getElementById("interest-output").innerHTML = "あまりなし"
+        document.getElementById("interest-output").innerHTML = "Low"
       }else if(EyeTracker.Interest == 2){
-        document.getElementById("interest-output").innerHTML = "若干高い"
+        document.getElementById("interest-output").innerHTML = "Neutral"
       }else if(EyeTracker.Interest == 3){
-        document.getElementById("interest-output").innerHTML = "高い"
+        document.getElementById("interest-output").innerHTML = "High"
       }
   }
 
