@@ -19,3 +19,6 @@ Open `index.html`.
 
 ### Debug Mode
 Open `index.html?mode=debug`. Then areas you see will be highlighted.
+
+## Liscence
+MIT
